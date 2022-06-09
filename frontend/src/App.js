@@ -1,12 +1,17 @@
 import React from "react";
-import styled from "styled-components";
-import Home from "./components/Home";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Dashboard, Error, Home, Register } from "./components";
 
 const App = () => {
   return (
-    <>
-      <Home />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Dashboard/>} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/home" element={<Home />} />
+        <Route path="*" element={<Error/>} />
+      </Routes>
+    </Router>
   );
 };
 

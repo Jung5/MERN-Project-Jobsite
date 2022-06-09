@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import main from "../images/main.svg";
 import Wrapper from "../Wrappers/Home";
-import {Logo} from "./index"
-
+import { Logo } from "./index";
 
 const Home = () => {
   return (
@@ -17,13 +17,14 @@ const Home = () => {
           </h1>
           <p>Welcome to my demo page!</p>
           <p>login credential</p>
-          <button className="btn btn-hero">Login/Register</button>
+          <Link to="/register" className="btn btn-hero">
+            Login/Register
+          </Link>
         </div>
         <img src={main} alt="" className="img main-img" />
       </div>
     </Wrapper>
   );
 };
-
 
 export default Home;
