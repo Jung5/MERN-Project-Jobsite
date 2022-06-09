@@ -1,7 +1,5 @@
 import Logo from "./Logo";
-import Error from "./Error";
-import Register from "./Register";
-import Home from "./Home";
-import Dashboard from "./Dashboard";
+import FormRow from "./FormRow";
+import Alert from "./Alert";
 
-export { Dashboard, Logo, Home, Register, Error };
+export { Logo, FormRow, Alert };
