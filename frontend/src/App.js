@@ -1,10 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import Home from "./components/Home";
 
-function App() {
+const App = () => {
   return (
-    <div> Test</div>
+    <>
+      <Home />
+    </>
   );
-}
+};
 
 export default App;
