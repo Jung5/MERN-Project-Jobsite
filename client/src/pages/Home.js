@@ -16,7 +16,6 @@ const Home = () => {
             job <span>tracking</span> app
           </h1>
           <p>Welcome to my demo page!</p>
-          <p>login credential</p>
           <Link to="/register" className="btn btn-hero">
             Login/Register
           </Link>
