@@ -7,6 +7,9 @@ const initialState = {
   showAlert: false,
   alertText: "",
   alertType: "",
+  user: null,
+  token: null,
+  userLocation: "",
 };
 
 const AppContext = React.createContext();
@@ -16,17 +19,19 @@ const AppProvider = ({ children }) => {
 
   const displayAlert = () => {
     dispatch({ type: DISPLAY_ALERT });
-    clearAlert()
+    clearAlert();
   };
 
   const clearAlert = () => {
-    setTimeout(()=>{
-      dispatch({type:CLEAR_ALERT})
-    },3000)
-  }
-  
+    setTimeout(() => {
+      dispatch({ type: CLEAR_ALERT });
+    }, 3000);
+  };
+
   return (
-    <AppContext.Provider value={{ ...state, displayAlert }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state, displayAlert }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 
