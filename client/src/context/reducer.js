@@ -91,7 +91,6 @@ const reducer = (state, action) => {
   if (action.type === SETUP_USER_BEGIN) {
     return { ...state, isLoading: true };
   }
-
   if (action.type === SETUP_USER_SUCCESS) {
     return {
       ...state,
@@ -105,7 +104,6 @@ const reducer = (state, action) => {
       alertText: action.payload.alertText,
     };
   }
-
   if (action.type === SETUP_USER_ERROR) {
     return {
       ...state,
