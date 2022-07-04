@@ -7,7 +7,7 @@ const ProtectedRoute = ({ children }) => {
   if (!user) {
     return <Navigate to="/home" />;
   }
-  return <div>there is no user</div>;
+  // return <div>there is no user</div>;
   return children;
 };
 
