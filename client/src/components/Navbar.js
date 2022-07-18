@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <Wrapper>
       <div className="nav-center">
-        <button className="toggle-btn" onClick={toggleSidebar}>
+        <button type="button" className="toggle-btn" onClick={toggleSidebar}>
           <FaAlignLeft />
         </button>
         <div>
@@ -18,17 +18,17 @@ const Navbar = () => {
           <h3 className="logo-text">dashboard</h3>
         </div>
         <div className="btn-container">
-          <button type="button" className="btn" onClick={logoutUser}>
+          <button
+            type="button"
+            className="btn"
+            onClick={() => setShowLogout(!showLogout)}
+          >
             <FaUserCircle />
             {user?.name}
             <FaCaretDown />
           </button>
           <div className={showLogout ? "dropdown show-dropdown" : "dropdown"}>
-            <button
-              type="button"
-              className="dropdown-btn"
-              onClick={() => console.log("logout button")}
-            >
+            <button type="button" className="dropdown-btn" onClick={logoutUser}>
               logout
             </button>
           </div>
